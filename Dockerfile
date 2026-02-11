@@ -1,5 +1,7 @@
-FROM mstmelody/python-ffmpeg:20240327020500
-RUN pip3 --no-cache-dir install showroompodcast==20241231044500 \
- && mkdir /workspace/output 
+FROM mstmelody/python-ffmpeg:20260212032000
+RUN uv venv --python 3.13 \
+ && uv pip --no-cache-dir install showroompodcast==20260212035500 \
+ && mkdir /workspace/output
 VOLUME ["/workspace/output"]
-ENTRYPOINT [ "showroom-podcast" ]
+ENTRYPOINT [ "uv", "run" ]
+CMD [ "--no-config", "showroom-podcast" ]
