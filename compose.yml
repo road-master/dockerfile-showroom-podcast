@@ -1,8 +1,0 @@
-services:
-  showroom-podcast:
-    build: .
-    image: mstmelody/showroom-podcast:latest
-    volumes:
-      - .:/workspace
-      - ./output:/workspace/output
-      - /workspace/.venv

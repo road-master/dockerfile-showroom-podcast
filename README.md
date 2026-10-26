@@ -51,11 +51,10 @@ Create `output` directory.
 
 3\.
 
-Create `docker-compose.yml`:
+Create `compose.yaml`:
 
 ```yaml
 ---
-version: '3.8'
 services:
   showroom-podcast:
     image: mstmelody/showroom-podcast
@@ -70,7 +69,7 @@ So far, the directory structure looks like this:
 your-workspace/
 +----output/
 +----config.yml
-+----docker-compose.yml
++----compose.yaml
 ```
 
 4\.
@@ -78,7 +77,7 @@ your-workspace/
 Execute command in terminal to run:
 
 ```console
-docker-compose up
+docker compose up
 ```
 
 Then, process will automatically archive live into `output` directory when live has started.

@@ -1,0 +1,12 @@
+services:
+  showroom-podcast:
+    build:
+      args:
+        IMAGE_TAG_FFMPEG: '20261027005000'
+        VERSION_SHOWROOM_PODCAST: '20261026235500'
+      context: .
+    image: mstmelody/showroom-podcast:latest
+    volumes:
+      - .:/workspace
+      - /workspace/.venv
+      - ./output:/workspace/output
